@@ -50,21 +50,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-  --header-height: 3.5rem;
+  /* Màu nền trang */
+  --color-background: #f5f0e6;   /* giấy cũ, beige nhẹ */
+  --color-container: #ece2d0;    /* container nhạt hơn nền để tạo chiều sâu */
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(28, 88%, 62%);
-  --first-color-alt: hsl(28, 84%, 58%);
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 75%);
-  --text-color-light: hsl(0, 0%, 65%);
-  --black-color: hsl(0, 0%, 6%);
-  --body-color: hsl(0, 0%, 6%);
-  --container-color: hsl(0, 0%, 10%);
+  /* Màu chữ */
+  --color-text-main: #3b2f2f;    /* nâu sẫm, dễ đọc */
+  --color-text-secondary: #5c4a3d; /* nâu nhạt hơn cho subtitle / caption */
+  --color-text-accent: #7c5e3c;  /* nâu đỏ ấm để nhấn nhá link / highlight */
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+  /* Màu nút / link / accent */
+  --color-accent: #b77e4b;       /* nâu vàng ấm, tạo điểm nhấn */
+  --color-accent-hover: #d1670b; /* hover đậm hơn */
+
+  /* Border, divider */
+  --color-border: #d4c3b0;       /* nâu nhạt / sepia */
+
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
   --biggest-font-size: 3rem;
@@ -74,13 +75,9 @@ h1, h2, h3, h4, h5, h6 {
   --h3-font-size: 1rem;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
-
-  /*========== Font weight ==========*/
+  
   --font-regular: 400;
   --font-semi-bold: 600;
   --font-bold: 700;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
 }
+
