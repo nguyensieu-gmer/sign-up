@@ -10,43 +10,52 @@
 <body>
     <div class="sign_in">
         <div class="image">
-            <img src="image/side_picture1.avif" alt="image">
+            <img src="image/side_picture.avif" alt="image">
         </div>
-        <form action="#" method="get">
+        <form class="form_signin" action="#" method="get">
             <div class="head_form">
-                <h1 class="title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod beatae, distinctio et odio iusto, rem dolores sint qui neque expedita blanditiis praesentium. Est tenetur quis unde eveniet ad dolores.</h1>
+                <h1 class="title">This is the online service. We need your information for product, sale and support if you need </h1>
                 <p class="description">You know you want to</p>
             </div>
-            <fieldset class="body_form">
-                <legend>sign in</legend>
-                <div class="firstname">
-                    <label for="fname">First Name</label>
-                    <input type="text" name="fname" id="fname">
+            <div class="body_form">
+                <div class="left">
+                    <div class="firstname">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname">
+                        <span></span>
+                    </div>
+                    <div class="lastname">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname">
+                        <span></span>
+                    </div>
+                    <div class="email_user">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                        <span></span>
+                    </div>
                 </div>
-                <div class="lastname">
-                    <label for="lname">Last Name</label>
-                    <input type="text" name="lname" id="lname">
+                <div class="right">
+                    <div class="phone_number">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone">
+                        <span></span>
+                    </div>
+                    <div class="user_password">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                        <span></span>
+                    </div>
+                    <div class="confirm_password">
+                        <label for="confirm">Confirm Password</label>
+                        <input type="password" name="confirm" id="confirm">
+                        <span></span>
+                    </div>
                 </div>
-                <div class="email_user">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="phone_number">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" name="phone" id="phone">
-                </div>
-                <div class="user_password">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
-                </div>
-                <div class="confirm_password">
-                    <label for="confirm">Confirm Password</label>
-                    <input type="password" name="confirm" id="confirm">
-                </div>
-            </fieldset>
+            </div>
             <div class="foot_form">
                 <button type="submit">send me</button>
-                <p>Already have an account? <span>Log in</span></p>
+                <p>Already have an account? <span class="log">Log in</span></p>
             </div>
         </form>
     </div>

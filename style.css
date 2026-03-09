@@ -51,8 +51,8 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   /* Màu nền trang */
-  --color-background: #f5f0e6;   /* giấy cũ, beige nhẹ */
-  --color-container: #ece2d0;    /* container nhạt hơn nền để tạo chiều sâu */
+  --color-background: #f5f2ed;   /* giấy cũ, beige nhẹ */
+  --color-container: #efe8db;    /* container nhạt hơn nền để tạo chiều sâu */
 
   /* Màu chữ */
   --color-text-main: #3b2f2f;    /* nâu sẫm, dễ đọc */
@@ -88,4 +88,108 @@ h1, h2, h3, h4, h5, h6 {
     width: 100vw;
 
     display: flex;
+}
+
+.sign_in .image{
+    flex-shrink: 0;
+    width: fit-content;
+    height: 100vh;
+    z-index: 2;
+}
+
+.sign_in .image img{
+    height: 100vh;
+    object-fit: cover;
+}
+
+.sign_in .form_signin{
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
+.sign_in .form_signin .head_form,
+.sign_in .form_signin .body_form,
+.sign_in .form_signin .foot_form{
+    height: calc(100vh / 3);
+}
+
+.sign_in .form_signin .head_form{
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    background-color: var(--color-background);
+}
+
+.sign_in .form_signin .head_form .description{
+    font-weight: var(--font-semi-bold);
+    margin-top: 1rem;
+}
+
+.sign_in .form_signin .body_form{
+    background-color: var(--color-container);
+    color: var(--color-text-main);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6rem;
+    box-shadow: 0 0 20px 1px rgb(172, 171, 171);
+    z-index: 1;
+}
+
+.sign_in .form_signin .body_form .left{
+    display: flex;
+    flex-direction: column;
+}
+
+.sign_in .form_signin .body_form .right{
+    display: flex;
+    flex-direction: column;
+}
+
+.sign_in .form_signin .body_form label{
+    display: block;
+    font-weight: var(--font-bold);
+    margin-bottom: 0.2rem;
+}
+
+.sign_in .form_signin .body_form div > div{
+    margin-bottom: 0.5rem;
+}
+
+.sign_in .form_signin .foot_form{
+    padding: 2rem;
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.sign_in .form_signin .foot_form button[type="submit"]{
+    padding: 0.8rem 2rem;
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+    background-color: var(--color-accent);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px 1px rgb(115, 115, 115);
+}
+
+.sign_in .form_signin .foot_form button[type="submit"]:hover{
+    background-color: var(--color-accent-hover);
+    cursor: pointer;
+}
+
+.sign_in .form_signin .foot_form .log{
+    font-weight: var(--font-bold);
+    color: var(--color-accent);
+    transition: 0.3s ease;
+}
+
+.sign_in .form_signin .foot_form .log:hover{
+    color: var(--color-accent-hover);
+    cursor: pointer;
 }
