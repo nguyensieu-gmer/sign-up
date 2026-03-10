@@ -22,6 +22,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Montserrat", sans-serif;
+  background-color: var(--color-container);
 }
 
 img, picture, video, canvas, svg {
@@ -95,6 +96,9 @@ h1, h2, h3, h4, h5, h6 {
     width: fit-content;
     height: 100vh;
     z-index: 2;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgb(115, 115, 115);
 }
 
 .sign_in .image img{
@@ -181,6 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 .sign_in .form_signin .foot_form button[type="submit"]:hover{
     background-color: var(--color-accent-hover);
     cursor: pointer;
+    padding: 0.8rem 2.5rem
 }
 
 .sign_in .form_signin .foot_form .log{
@@ -192,4 +197,50 @@ h1, h2, h3, h4, h5, h6 {
 .sign_in .form_signin .foot_form .log:hover{
     color: var(--color-accent-hover);
     cursor: pointer;
+}
+
+.sign_in .form_signin .body_form input{
+    border-radius: 4px;
+    border: 2px solid var(--color-accent);
+}
+
+.sign_in .form_signin .body_form input:focus{
+    border: 2px solid var(--color-accent-hover);
+}
+
+.sign_in .form_signin .body_form input{
+    outline: none;
+    padding: 0.2rem;
+    height: 2.2rem;
+    width: 15rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--color-text-accent);
+}
+
+.sign_in .form_signin .body_form input[type="email"]{
+    width: 18rem;
+}
+
+.sign_in .form_signin .body_form input:user-invalid{
+    border: 2px solid red;
+}
+
+.sign_in .form_signin .body_form input + span{
+    position: relative;
+}
+
+.sign_in .form_signin .body_form input[type="text"] + span::before, 
+.sign_in .form_signin .body_form input[type="email"] + span::before,
+.sign_in .form_signin .body_form input[type="password"] + span::before{
+    content: "required";
+    position: absolute;
+    display: block;
+    background-color: var(--color-text-secondary);
+    font-weight: var(--font-bold);
+    color: white;
+    font-size: var(--small-font-size);
+    width: 4rem;
+    text-align: center;
+    right: 1px;
+    bottom: 30px;
 }
