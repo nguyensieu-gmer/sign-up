@@ -38,17 +38,23 @@
                 <div class="right">
                     <div class="phone_number">
                         <label for="phone">Phone Number(option)</label>
-                        <input type="tel" name="phone" id="phone">
+                        <input type="tel" name="phone" id="phone" placeholder="0123-456-7890">
                         <span></span>
                     </div>
-                    <div class="user_password">
+                    <div class="password_field">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" required maxlength="10">
+                        <input type="password" name="password" id="password" placeholder="XXXXXXXX" required minlength="8" maxlength="100">
                         <span></span>
+
+                        <ul class="password_rule">
+                            <li id="password_length">at least 8 character</li>
+                            <li id="password_number">inlude at least 1 number</li>
+                            <li id="password_char">include at least 1 alphabet</li>
+                        </ul>
                     </div>
                     <div class="confirm_password">
                         <label for="confirm">Confirm Password</label>
-                        <input type="password" name="confirm" id="confirm" required maxlength="10">
+                        <input type="password" name="confirm" id="confirm" placeholder="XXXXXXXX" required maxlength="10">
                         <span></span>
                     </div>
                 </div>

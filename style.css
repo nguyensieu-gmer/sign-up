@@ -217,6 +217,20 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-accent);
 }
 
+.sign_in .form_signin .body_form input:user-invalid{
+    border: 2px solid red;
+}
+
+.sign_in .form_signin .body_form input:user-invalid + span::after{
+    content: "✖";
+    color: red;
+}
+
+.sign_in .form_signin .body_form input:user-valid + span::after{
+    content: "✓";
+    color: green;
+}
+
 .sign_in .form_signin .body_form input[type="email"]{
     width: 18rem;
 }
@@ -243,4 +257,20 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     right: 1px;
     bottom: 30px;
+}
+
+.sign_in .form_signin .body_form .password_field{
+    position: relative;
+}
+
+.sign_in .form_signin .body_form .password_field .password_rule{
+    position: absolute;
+    width: 18rem;
+    left: 240px;
+    top: 8px;
+    visibility: hidden;
+}
+
+.sign_in .form_signin .body_form .password_field:focus-within .password_rule{
+    visibility: visible;
 }
