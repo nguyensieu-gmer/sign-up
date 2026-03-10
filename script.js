@@ -1,12 +1,21 @@
 const form = document.getElementById("form");
 const password = document.getElementById("password");
-const passwordRule = document.querySelector(".password_rule");
 
-// return value from 1 to 3 present the nth rule are applied
-function checkValidPasword(str){
-    
+const rules = {
+    length: v => v.length >= 8,
+    number: v => /[0-9]/.test(v),
+    character: v => /[A-Za-z]/.test(v),
 }
 
 form.addEventListener("submit", e => {
     e.preventDefault();
 }); 
+
+password.addEventListener("input", (e) => {
+    const value = password.value;
+
+    for (let rule in rules){
+        let element = document.getElementById(rule);
+        element.classList.toggle("valid", rules[rule](value));
+    }
+});

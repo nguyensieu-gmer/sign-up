@@ -271,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
     visibility: hidden;
 }
 
-.sign_in .form_signin .body_form .password_field .password_rule li:valid{
+.sign_in .form_signin .body_form .password_field .password_rule li.valid{
     color: green;
 }
 
