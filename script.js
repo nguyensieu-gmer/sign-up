@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
 const password = document.getElementById("password");
+const confirm = document.getElementById("confirm");
 
 const rules = {
     length: v => v.length >= 8,
@@ -19,3 +20,15 @@ password.addEventListener("input", (e) => {
         element.classList.toggle("valid", rules[rule](value));
     }
 });
+
+function validatePassword(){
+    if (password.value !== confirm.value){
+        confirm.setCustomValidity("Password don not match");
+    }
+    else{
+        confirm.setCustomValidity("");
+    }
+}
+
+confirm.addEventListener("input", validatePassword);
+password.addEventListener("input", validatePassword);
