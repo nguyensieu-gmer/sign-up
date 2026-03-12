@@ -279,3 +279,13 @@ h1, h2, h3, h4, h5, h6 {
     visibility: visible;
 }
 
+.sign_in .form_signin .foot_form .sign{
+    color: var(--color-accent);
+    font-size: var(--h2-font-size);
+    transition: 0.3s ease;
+}
+
+.sign_in .form_signin .foot_form .sign:hover{
+    cursor: pointer;
+    color: var(--color-accent-hover);
+}
